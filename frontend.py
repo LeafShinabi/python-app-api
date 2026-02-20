@@ -12,7 +12,7 @@ if st.button("Send to Backend"):
     
     try:
         # 2. GET the data from the other file
-        response = requests.get(backend_url)
+        response = requests.get(f"https://python-app-api.onrender.com/greet?name={user_name}")
         result = response.json()
         
         # 3. Display the result in the UI
